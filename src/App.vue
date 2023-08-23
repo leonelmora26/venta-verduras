@@ -29,7 +29,6 @@
           <h1 class="text">{{ item.text }}</h1>
           <img :src="item.img" alt="">
           <h2>${{item.precio }}</h2>
-
         </div>
       </div>
       <div class="descuento">
@@ -41,7 +40,17 @@
           <img :src="item.img" alt="">
         </div>
       </div>
+      <div class="descuento">
+        <p> <strong>Productos al 50% de descuento</strong></p>
+        <p class="primer">(Solo aplicable del 15 de Septiembre al 01 de Diciembre)</p>
+      </div>
+      <div class=" cards-dos">
+        <div v-for="(item, index) in imagenes3" :key="index" class="card">
+          <img :src="item.img" alt="">
+        </div>
+      </div>
     </div>
+    
   </section>
 </template>
 
@@ -65,6 +74,16 @@ const imagenes2 = ref([{
 }, {
   img: '/src/8.jpg',
 }])
+const imagenes3 = ref([{
+  img: '/src/9.jpg',
+}, {
+  img: '/src/10.jpg',
+}, {
+  img: '/src/11.jpg'
+}, {
+  img: '/src/12.jpg',
+}])
+
 
 function moneda(precio){
  return precio.toLocaleString("es-ES", {
