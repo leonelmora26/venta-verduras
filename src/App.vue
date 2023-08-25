@@ -310,7 +310,7 @@ img {
 }
 
 .fondo-imagen {
-  background-image: url(./public/fotico.jpg);
+  background-image: url(/public/fotico.jpg);
   height: 98%;
   width: 100%;
   position: absolute;
