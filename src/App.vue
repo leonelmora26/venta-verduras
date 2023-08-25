@@ -114,31 +114,31 @@
 <script setup>
 import { ref } from 'vue';
 const imagenes = ref([{
-  img: './public/1.jpg', text: "Papa Criolla", precio: 1000
+  img: '/src/1.jpg', text: "Papa Criolla", precio: 1000
 }, {
-  img: './public/2.jpg',text: "Cebolla Roja", precio: 1000
+  img: '/src/2.jpg',text: "Cebolla Roja", precio: 1000
 }, {
-  img: './public/3.jpg',text: "Cebolla Blanca", precio: 1000
+  img: '/src/3.jpg',text: "Cebolla Blanca", precio: 1000
 }, {
-  img: './public/4.jpg',text: "Zanahoria", precio: 1000
+  img: '/src/4.jpg',text: "Zanahoria", precio: 1000
 }])
 const imagenes2 = ref([{
-  img: './public/5.jpg',text: "Brocoli", precio: 1000
+  img: '/src/5.jpg',text: "Brocoli", precio: 1000
 }, {
-  img: './public/6.jpg',text: "Tomate", precio: 1000
+  img: '/src/6.jpg',text: "Tomate", precio: 1000
 }, {
   img: './public/7.jpg',text: "Calabazin", precio: 1000
 }, {
-  img: './public/8.jpg',text: "Yuca", precio: 1000
+  img: '/src/8.jpg',text: "Yuca", precio: 1000
 }])
 const imagenes3 = ref([{
-  img: './public/9.jpg',text: "Fresa", precio: 1000
+  img: '/src/9.jpg',text: "Fresa", precio: 1000
 }, {
-  img: './public/10.jpg',text: "Kiwi", precio: 1000
+  img: '/src/10.jpg',text: "Kiwi", precio: 1000
 }, {
-  img: './public/11.jpg',text: "Naranja", precio: 1000
+  img: '/src/11.jpg',text: "Naranja", precio: 1000
 }, {
-  img: './public/12.jpg',text: "Piña", precio: 1000
+  img: '/src/12.jpg',text: "Piña", precio: 1000
 }])
 
 const mostrarCarrito = ref(false);
@@ -310,7 +310,7 @@ img {
 }
 
 .fondo-imagen {
-  background-image: url(/public/fotico.jpg);
+  background-image: url(./fotico.jpg);
   height: 98%;
   width: 100%;
   position: absolute;
