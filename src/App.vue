@@ -114,31 +114,31 @@
 <script setup>
 import { ref } from 'vue';
 const imagenes = ref([{
-  img: '/src/public/1.jpg', text: "Papa Criolla", precio: 1000
+  img: '/1.jpg', text: "Papa Criolla", precio: 1000
 }, {
-  img: '/src/public/2.jpg',text: "Cebolla Roja", precio: 1000
+  img: '/2.jpg',text: "Cebolla Roja", precio: 1000
 }, {
-  img: '/src/public/3.jpg',text: "Cebolla Blanca", precio: 1000
+  img: '/3.jpg',text: "Cebolla Blanca", precio: 1000
 }, {
-  img: '/src/public/4.jpg',text: "Zanahoria", precio: 1000
+  img: '/4.jpg',text: "Zanahoria", precio: 1000
 }])
 const imagenes2 = ref([{
-  img: '/src/public/5.jpg',text: "Brocoli", precio: 1000
+  img: '/5.jpg',text: "Brocoli", precio: 1000
 }, {
-  img: '/src/public/6.jpg',text: "Tomate", precio: 1000
+  img: '/6.jpg',text: "Tomate", precio: 1000
 }, {
-  img: '/src/public/7.jpg',text: "Calabazin", precio: 1000
+  img: '/7.jpg',text: "Calabazin", precio: 1000
 }, {
-  img: '/src/public/8.jpg',text: "Yuca", precio: 1000
+  img: '/8.jpg',text: "Yuca", precio: 1000
 }])
 const imagenes3 = ref([{
-  img: '/src/public/9.jpg',text: "Fresa", precio: 1000
+  img: '/9.jpg',text: "Fresa", precio: 1000
 }, {
-  img: '/src/public/10.jpg',text: "Kiwi", precio: 1000
+  img: '/10.jpg',text: "Kiwi", precio: 1000
 }, {
-  img: '/src/public/11.jpg',text: "Naranja", precio: 1000
+  img: '/11.jpg',text: "Naranja", precio: 1000
 }, {
-  img: '/src/public/12.jpg',text: "Piña", precio: 1000
+  img: '/12.jpg',text: "Piña", precio: 1000
 }])
 
 const mostrarCarrito = ref(false);
