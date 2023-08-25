@@ -73,7 +73,7 @@
       </div>
       <div class=" cards">
         <div v-for="(item, index) in imagenes" :key="index" class="card" style="color: white;">
-          <img :src="item.img" style="border-bottom: solid 2px grey;">
+          <img :src="`/` + item.img" style="border-bottom: solid 2px grey;">
           <h1 >{{ item.text }}</h1>
           <h2 style="font-size: 16px; color: black;">Precio ${{item.precio }}
           </h2>
@@ -88,7 +88,7 @@
       </div>
       <div class=" cards-dos">
         <div v-for="(item, index) in imagenes2" :key="index" class="card">
-          <img :src="item.img" style="border-bottom: solid 2px grey;">
+          <img :src="`/` + item.img" style="border-bottom: solid 2px grey;">
           <h1 >{{ item.text }}</h1>
           <h2 style="font-size: 16px; color: black;">Precio ${{item.precio }}</h2>
           <button class="color" @click="agregarAlCarrito(item)" style="margin-bottom: 20px"> ➕ </button>
@@ -114,31 +114,31 @@
 <script setup>
 import { ref } from 'vue';
 const imagenes = ref([{
-  img: '/src/assets/1.jpg', text: "Papa Criolla", precio: 1000
+  img: '/src/public/1.jpg', text: "Papa Criolla", precio: 1000
 }, {
-  img: '/src/assets/2.jpg',text: "Cebolla Roja", precio: 1000
+  img: '/src/public/2.jpg',text: "Cebolla Roja", precio: 1000
 }, {
-  img: '/src/assets/3.jpg',text: "Cebolla Blanca", precio: 1000
+  img: '/src/public/3.jpg',text: "Cebolla Blanca", precio: 1000
 }, {
-  img: '/src/assets/4.jpg',text: "Zanahoria", precio: 1000
+  img: '/src/public/4.jpg',text: "Zanahoria", precio: 1000
 }])
 const imagenes2 = ref([{
-  img: '/src/assets/5.jpg',text: "Brocoli", precio: 1000
+  img: '/src/public/5.jpg',text: "Brocoli", precio: 1000
 }, {
-  img: '/src/assets/6.jpg',text: "Tomate", precio: 1000
+  img: '/src/public/6.jpg',text: "Tomate", precio: 1000
 }, {
-  img: '/src/assets/7.jpg',text: "Calabazin", precio: 1000
+  img: '/src/public/7.jpg',text: "Calabazin", precio: 1000
 }, {
-  img: '/src/assets/8.jpg',text: "Yuca", precio: 1000
+  img: '/src/public/8.jpg',text: "Yuca", precio: 1000
 }])
 const imagenes3 = ref([{
-  img: '/src/assets/9.jpg',text: "Fresa", precio: 1000
+  img: '/src/public/9.jpg',text: "Fresa", precio: 1000
 }, {
-  img: '/src/assets/10.jpg',text: "Kiwi", precio: 1000
+  img: '/src/public/10.jpg',text: "Kiwi", precio: 1000
 }, {
-  img: '/src/assets/11.jpg',text: "Naranja", precio: 1000
+  img: '/src/public/11.jpg',text: "Naranja", precio: 1000
 }, {
-  img: '/src/assets/12.jpg',text: "Piña", precio: 1000
+  img: '/src/public/12.jpg',text: "Piña", precio: 1000
 }])
 
 const mostrarCarrito = ref(false);
