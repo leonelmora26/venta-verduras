@@ -125,33 +125,47 @@
 
 <script setup>
 import { ref } from 'vue';
+import img1 from '/src/1.jpg';
+import img2 from '/src/2.jpg';
+import img3 from '/src/3.jpg';
+import img4 from '/src/4.jpg';
+import img5 from '/src/5.jpg';
+import img6 from '/src/6.jpg';
+import img7 from '/src/7.jpg';
+import img8 from '/src/8.jpg';
+import img9 from '/src/9.jpg';
+import img10 from '/src/10.jpg';
+import img11 from '/src/11.jpg';
+import img12 from '/src/12.jpg';
+
+
 const imagenes = ref([{
 
-  img: './src/1.jpg', text: "Papa Criolla", precio: 1000
+  img: img1, text: "Papa Criolla", precio: 1000
 }, {
-  img: './public/2.jpg', text: "Cebolla Roja", precio: 1000
+  img: img2, text: "Cebolla Roja", precio: 1000
 }, {
-  img: './src/3.jpg', text: "Cebolla Blanca", precio: 1000
+  img: img3, text: "Cebolla Blanca", precio: 1000
 }, {
-  img: './src/4.jpg', text: "Zanahoria", precio: 1000
+  img: img4, text: "Zanahoria", precio: 1000
 }])
 const imagenes2 = ref([{
-  img: './src/5.jpg', text: "Brocoli", precio: 1000
+  img: img5, text: "Brocoli", precio: 1000
 }, {
-  img: './src/6.jpg', text: "Tomate", precio: 1000
+  img: img6, text: "Tomate", precio: 1000
 }, {
-  img: './src/7.jpg', text: "Calabazin", precio: 1000
+  img: img7, text: "Calabazin", precio: 1000
 }, {
-  img: './src/8.jpg', text: "Yuca", precio: 1000
+  img: img8, text: "Yuca", precio: 1000
 }])
 const imagenes3 = ref([{
-  img: './src/9.jpg', text: "Fresa", precio: 1000
+  img: img9, text: "Fresa", precio: 1000
 }, {
-  img: './src/10.jpg', text: "Kiwi", precio: 1000
+  img: img10, text: "Kiwi", precio: 1000
 }, {
-  img: './src/11.jpg', text: "Naranja", precio: 1000
+  img: img11, text: "Naranja", precio: 1000
 }, {
-  img: '/src/2.jpg', text: "Piña", precio: 1000
+  img: img12, text: "Piña", precio: 1000
 }])
 
 const mostrarCarrito = ref(false);
