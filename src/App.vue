@@ -61,6 +61,8 @@
               </div>
               <button @click="cerrar(index)"
                 style="background-color: rgb(18, 14, 63); border: 0; cursor: pointer; font-size: x-large; color: wheat;">CERRAR</button>
+                <button @click="limpiar(index)"
+                style="background-color: rgb(18, 14, 63); border: 0; cursor: pointer; font-size: x-large; color: wheat;">LIMPIAR</button>
             </div>
           </div>
         </div>
@@ -215,6 +217,9 @@ const calcularTotal = () => {
 const cerrar = () => {
   mostrarCarrito.value = false;
 }
+function limpiar() {
+  carrito.value = [];
+}
 
 </script>
 
@@ -227,11 +232,13 @@ body {
 .card {
   border: solid 3px rgb(0, 0, 0);
   background-color: white;
+  
 }
 
 .color {
   background-color: greenyellow;
   width: 30%;
+  
 }
 
 .cards {
@@ -287,7 +294,7 @@ img {
 .modal-content {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 10px;
   width: 60%;
   max-height: 80%;
   overflow: auto;
@@ -386,11 +393,10 @@ img {
   background-image: url(./fondo.jpg);
   border: solid 2px black;
   height: 100%;
-  text-align: center;
+  text-align: center; 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
 }
 
 .blanco {
@@ -420,5 +426,3 @@ h1 {
   color: black;
 }
 </style>
-
-
