@@ -10,7 +10,7 @@
           <div v-if="showModal" class="modal">
             <div class="modal-content">
               <h1
-                style="font-size: 30px; width: 100%; background-color: rgb(54, 100, 158);; margin: 0; border-radius: 35px;">
+                style="font-size: 30px; width: 100%; background-color: #1351e2dc;border: solid 1px black; margin: 0; border-radius: 35px;">
                 Carrito de Compras</h1>
               <table>
                 <thead>
@@ -28,7 +28,7 @@
                     <td><img :src="producto.img" :alt="producto.nombre" class="imagen-producto"></td>
                     <td>{{ producto.text }}</td>
                     <td>{{ producto.cantidad }}</td>
-                    <td>${{ producto.precio.toLocaleString("es-ES", {
+                    <td>${{ producto.Libra.toLocaleString("es-ES", {
                       style: "currency",
                       currency: "COP",
                       minimumFractionDigits: 0,
@@ -59,10 +59,10 @@
                   useGrouping: true
                 }) }}</span>
               </div>
-              <button @click="cerrar(index)"
-                style="background-color: rgb(18, 14, 63); border: 0; cursor: pointer; font-size: x-large; color: wheat;">CERRAR</button>
                 <button @click="limpiar(index)"
                 style="background-color: rgb(18, 14, 63); border: 0; cursor: pointer; font-size: x-large; color: wheat;">LIMPIAR</button>
+                <button @click="cerrar(index)"
+                style="background-color: rgb(18, 14, 63); border: 0; cursor: pointer; font-size: x-large; color: wheat;">CERRAR</button>
             </div>
           </div>
         </div>
@@ -89,7 +89,7 @@
         <div v-for="(item, index) in imagenes" :key="index" class="card" style="color: white;">
           <img :src="item.img" style="border-bottom: solid 2px grey;">
           <h1>{{ item.text }}</h1>
-          <h2 style="font-size: 16px; color: black;">Precio ${{ item.precio }}
+          <h2 style="font-size: 16px; color: black;">Libra a ${{ item.Libra }}
           </h2>
           <button class="color" @click="agregarAlCarrito(item)" style="margin-bottom: 20px"> ➕ </button>
         </div>
@@ -104,7 +104,7 @@
         <div v-for="(item, index) in imagenes2" :key="index" class="card">
           <img :src="item.img" style="border-bottom: solid 2px grey;">
           <h1>{{ item.text }}</h1>
-          <h2 style="font-size: 16px; color: black;">Precio ${{ item.precio }}</h2>
+          <h2 style="font-size: 16px; color: black;">Libra a  ${{ item.Libra }}</h2>
           <button class="color" @click="agregarAlCarrito(item)" style="margin-bottom: 20px"> ➕ </button>
         </div>
       </div>
@@ -116,7 +116,7 @@
         <div v-for="(item, index) in imagenes3" :key="index" class="card">
           <img :src="item.img" style="border-bottom: solid 2px grey;">
           <h1>{{ item.text }}</h1>
-          <h2 style="font-size: 16px; color: black;">Precio ${{ item.precio }}</h2>
+          <h2 style="font-size: 16px; color: black;">Precio ${{ item.Libra }}</h2>
           <button class="color" @click="agregarAlCarrito(item)" style="margin-bottom: 20px"> ➕ </button>
         </div>
       </div>
@@ -143,31 +143,31 @@ import img12 from '/src/12.jpg';
 
 const imagenes = ref([{
 
-  img: img1, text: "Papa Criolla", precio: 1000
+  img: img1, text: "Papa Criolla", Libra: 2704
 }, {
-  img: img2, text: "Cebolla Roja", precio: 1000
+  img: img2, text: "Cebolla Roja", Libra: 1000
 }, {
-  img: img3, text: "Cebolla Blanca", precio: 1000
+  img: img3, text: "Cebolla Blanca", Libra: 1000
 }, {
-  img: img4, text: "Zanahoria", precio: 1000
+  img: img4, text: "Zanahoria", Libra: 1000
 }])
 const imagenes2 = ref([{
-  img: img5, text: "Brocoli", precio: 1000
+  img: img5, text: "Brocoli", Libra: 1000
 }, {
-  img: img6, text: "Tomate", precio: 1000
+  img: img6, text: "Tomate", Libra: 1000
 }, {
-  img: img7, text: "Calabazin", precio: 1000
+  img: img7, text: "Calabazin", Libra: 1000
 }, {
-  img: img8, text: "Yuca", precio: 1000
+  img: img8, text: "Yuca", Libra: 1000
 }])
 const imagenes3 = ref([{
-  img: img9, text: "Fresa", precio: 1000
+  img: img9, text: "Fresa", Libra: 1000
 }, {
-  img: img10, text: "Kiwi", precio: 1000
+  img: img10, text: "Kiwi", Libra: 1000
 }, {
-  img: img11, text: "Naranja", precio: 1000
+  img: img11, text: "Naranja", Libra: 1000
 }, {
-  img: img12, text: "Piña", precio: 1000
+  img: img12, text: "Piña", Libra: 1000
 }])
 
 const mostrarCarrito = ref(false);
@@ -293,17 +293,16 @@ img {
 
 .modal-content {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 60%;
-  max-height: 80%;
-  overflow: auto;
-  background-color: rgb(15, 95, 78);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    max-height: 80%;
+    background-color: rgb(19, 118, 210);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 50%);  
 }
 
 .imagen-producto {
