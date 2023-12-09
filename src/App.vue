@@ -210,7 +210,7 @@ const agregarAlCarrito = (item) => {
 const calcularTotal = () => {
   let total = 0;
   for (const producto of carrito.value) {
-    total += producto.precio * producto.cantidad;
+    total += producto.Libra * producto.cantidad;
   }
   return total;
 }
